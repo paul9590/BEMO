@@ -10,7 +10,7 @@
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">@color/blue</item>
         <!-- Customize your theme here. -->
         <item name="fontFamily">@font/light</item>
         <item name="windowNoTitle">true</item>
@@ -20,9 +20,29 @@
 
     <style name="Theme.BEMO.Splash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/white</item>
-        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
         <item name="android:windowSplashScreenBrandingImage">@drawable/img_branding</item>
         <item name="postSplashScreenTheme">@style/Theme.BEMO</item>
     </style>
 
+    <style name="homeTabTextSize" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">@font/light</item>
+        <item name="android:textSize">@dimen/font_size_tab</item>
+    </style>
+
+    <style name="text_title"  parent="@android:style/Widget.TextView">
+        <item name="fontFamily">@font/light</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_size_20</item>
+    </style>
+
+    <style name="btn_back" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">@dimen/height_20</item>
+        <item name="android:layout_height">@dimen/height_20</item>
+        <item name="android:background">@drawable/ic_back</item>
+        <item name="android:layout_marginLeft">@dimen/margin_31</item>
+        <item name="android:contentDescription">뒤로 가기</item>
+    </style>
 </resources>

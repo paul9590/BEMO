@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.bemo.client.vm.CompanyViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".fragment.ResultFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/guide_top" />
+
+        <TextView
+            style="@style/text_title"
+            android:text="@string/result_title"
+            app:layout_constraintBottom_toTopOf="@id/guideTop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imbBack"
+            style="@style/btn_back"
+            app:layout_constraintBottom_toTopOf="@id/guideTop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/viewCategory"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="@id/imbBack"
+            app:layout_constraintRight_toLeftOf="@id/btnSort"
+            app:layout_constraintTop_toBottomOf="@id/guideTop"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/btnSort"/>
+
+        <ImageButton
+            android:id="@+id/btnSort"
+            android:layout_width="@dimen/height_28"
+            android:layout_height="@dimen/height_28"
+            android:layout_marginEnd="@dimen/margin_31"
+            android:src="@drawable/imb_sort"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="@id/viewCategory" />
+
+        <TextView
+            android:id="@+id/txtPremium"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/viewCategory"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="@dimen/margin_31"
+            android:layout_marginTop="@dimen/margin_31"
+            android:text="@string/result_premium"
+            android:textColor="@color/blue_gray3"
+            android:textSize="@dimen/font_size_12"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtAd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/txtPremium"
+            app:layout_constraintTop_toTopOf="@id/txtPremium"
+            app:layout_constraintBottom_toBottomOf="@id/txtPremium"
+            android:text="@string/result_ad"
+            android:layout_marginStart="@dimen/margin_4"
+            android:textSize="@dimen/font_size_8"
+            android:textColor="@color/blue_gray3"
+            android:paddingStart="@dimen/margin_4"
+            android:paddingEnd="@dimen/margin_4"
+            android:paddingTop="@dimen/margin_2"
+            android:paddingBottom="@dimen/margin_2"
+            android:background="@drawable/shape_round_gray_border"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/viewCompany"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/margin_12"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtPremium" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

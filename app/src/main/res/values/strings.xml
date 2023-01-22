@@ -1,3 +1,38 @@
 <resources>
     <string name="app_name">BEMO</string>
+    <string name="middle_dot">·</string>
+
+    // result_fragment
+    <string name="result_title">검색 결과</string>
+    <string name="result_premium">프리미엄</string>
+    <string name="result_ad">광고</string>
+
+    // list_company
+    <string name="list_company_gb">국비지원</string>
+
+    <dimen name="company_img_size">60dp</dimen>
+
+
+    <dimen name="font_size_tab">10sp</dimen>
+    <dimen name="font_size_8">8sp</dimen>
+    <dimen name="font_size_10">10sp</dimen>
+    <dimen name="font_size_12">12sp</dimen>
+    <dimen name="font_size_13">13sp</dimen>
+    <dimen name="font_size_15">15sp</dimen>
+    <dimen name="font_size_20">20sp</dimen>
+
+    <dimen name="guide_top">56dp</dimen>
+
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_6">6dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
+    <dimen name="margin_31">31dp</dimen>
+
+    <dimen name="height_20">20dp</dimen>
+    <dimen name="height_28">28dp</dimen>
+
 </resources>
