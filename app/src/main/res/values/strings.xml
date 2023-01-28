@@ -21,6 +21,7 @@
 
     // list_company_location
     <string name="company_location">위치</string>
+    <dimen name="location_height">140dp</dimen>
 
     <dimen name="company_img_size">64dp</dimen>
 

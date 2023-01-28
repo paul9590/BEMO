@@ -1,11 +1,10 @@
 package com.bemo.client.activity
 
 import android.graphics.PorterDuff
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewTreeObserver
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.lifecycle.ViewModelProvider
 import com.bemo.client.R
 import com.bemo.client.databinding.ActivityMainBinding
 import com.bemo.client.fragment.HomeFragment
@@ -25,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         setTab()
 
-        mBinding.root.viewTreeObserver.addOnPreDrawListener (
+        mBinding.root.viewTreeObserver.addOnPreDrawListener(
             object : ViewTreeObserver.OnPreDrawListener {
                 override fun onPreDraw(): Boolean {
                     // TODO: splash 화면
@@ -34,6 +33,7 @@ class MainActivity : AppCompatActivity() {
             }
         )
     }
+
     private fun setTab() {
         val adapter = ViewAdapter(supportFragmentManager)
         adapter.apply {
@@ -49,17 +49,20 @@ class MainActivity : AppCompatActivity() {
             pagerMain.adapter = adapter
             tabMain.setupWithViewPager(mBinding.pagerMain)
 
-            for(i in texts.indices) {
+            for (i in texts.indices) {
                 val tab = tabMain.getTabAt(i)!!
                 tab.text = texts[i]
                 tab.setIcon(icons[i])
                 tab.icon?.setColorFilter(resources.getColor(R.color.gray), PorterDuff.Mode.SRC_IN)
             }
 
-            tabMain.getTabAt(0)!!.icon?.setColorFilter(resources.getColor(R.color.black), PorterDuff.Mode.SRC_IN)
+            tabMain.getTabAt(0)!!.icon?.setColorFilter(
+                resources.getColor(R.color.black),
+                PorterDuff.Mode.SRC_IN
+            )
         }
 
-        mBinding.tabMain.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
+        mBinding.tabMain.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(p0: TabLayout.Tab?) {
                 mBinding.pagerMain.currentItem = p0!!.position
                 p0.icon?.setColorFilter(resources.getColor(R.color.black), PorterDuff.Mode.SRC_IN)
