@@ -15,6 +15,13 @@
     <string name="company_target">대상</string>
     <string name="company_distance">거리</string>
 
+
+    // list_company_category
+    <string name="company_category">카테고리</string>
+
+    // list_company_location
+    <string name="company_location">위치</string>
+
     <dimen name="company_img_size">64dp</dimen>
 
     <dimen name="font_size_tab">10sp</dimen>
@@ -36,6 +43,7 @@
     <dimen name="padding_15">15dp</dimen>
 
     <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
     <dimen name="margin_12">12dp</dimen>
     <dimen name="margin_14">14dp</dimen>
     <dimen name="margin_16">16dp</dimen>
