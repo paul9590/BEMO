@@ -12,6 +12,7 @@ import com.bemo.client.R
 import com.bemo.client.activity.MainActivity
 import com.bemo.client.recycler.CompanyRecyclerAdapter
 import com.bemo.client.databinding.FragmentResultBinding
+import com.bemo.client.recycler.SelectedOptionRecyclerAdapter
 import com.bemo.client.vm.CompanyViewModel
 import com.bemo.client.vm.Request
 
@@ -22,8 +23,9 @@ class ResultFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    private val mAdapter = CompanyRecyclerAdapter()
-    private val viewModel = CompanyViewModel(Request.COMPANY_RESULT)
+    private val companyAdapter = CompanyRecyclerAdapter()
+    private val selectedOptionAdapter = SelectedOptionRecyclerAdapter()
+    private val companyViewModel = CompanyViewModel(Request.COMPANY_RESULT)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,9 +41,10 @@ class ResultFragment : Fragment() {
     ): View {
 
         val mBinding = FragmentResultBinding.inflate(inflater, container, false).apply {
-            viewCompany.adapter = mAdapter
+            viewCompany.adapter = companyAdapter
             viewCompany.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
-
+            viewSelectedOption.adapter = selectedOptionAdapter
+            viewSelectedOption.layoutManager = LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false)
 
             imbBack.setOnClickListener {
                 (activity as MainActivity).viewHome()
@@ -50,13 +53,20 @@ class ResultFragment : Fragment() {
             txtAd.setOnClickListener {
                 CustomSnackBar(root, getString(R.string.text_ad)).show()
             }
+            imbSort.setOnClickListener {
+                companyViewModel.addSelectedOptionItem("수학")
+            }
         }
 
-        mBinding.viewModel = viewModel
+        mBinding.viewModel = companyViewModel
         mBinding.lifecycleOwner = this
 
-        viewModel.companyList.observe(viewLifecycleOwner) {
-            viewModel.companyList.value?.let { mAdapter.setData(it) }
+        companyViewModel.companyList.observe(viewLifecycleOwner) {
+            companyViewModel.companyList.value?.let { companyAdapter.setData(it) }
+        }
+
+        companyViewModel.selectedOptionList.observe(viewLifecycleOwner) {
+            companyViewModel.selectedOptionList.value?.let { selectedOptionAdapter.setData(it) }
         }
 
         return mBinding.root

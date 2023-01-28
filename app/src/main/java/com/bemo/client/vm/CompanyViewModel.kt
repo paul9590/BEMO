@@ -15,13 +15,30 @@ class CompanyViewModel(private val request: Request): ViewModel() {
     val companyList: MutableLiveData<ArrayList<Company>>
         get() = _companyList
 
+    private val _selectedOptionList = MutableLiveData<ArrayList<String>>()
+    val selectedOptionList: MutableLiveData<ArrayList<String>>
+        get() = _selectedOptionList
+
+    private val currentSelectedOptionList =  ArrayList<String>().apply {
+        add("수학")
+        add("국어")
+    }
+
     init {
         _companyList.value = getCompanyList()
+        _selectedOptionList.value = currentSelectedOptionList
     }
 
     // TODO: 최근 본 업체 정보 API 호출
     // TODO: 검색 결과 업체 정보 API 호출
     // TODO: 찜 목록 업체 정보 API 호출
+    // TODO: 선택한 옵션 호출
+
+
+    fun addSelectedOptionItem(item: String) {
+        currentSelectedOptionList.add(item)
+        _selectedOptionList.value = currentSelectedOptionList
+    }
 
     private fun getCompanyList(): ArrayList<Company> {
         return when(request) {

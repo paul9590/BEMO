@@ -44,25 +44,25 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/viewCategory"
+            android:id="@+id/viewSelectedOption"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginLeft="@dimen/margin_24"
+            android:layout_marginStart="@dimen/margin_24"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="@id/btnSort"
+            app:layout_constraintBottom_toBottomOf="@id/imbSort"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/btnSort"
+            app:layout_constraintRight_toLeftOf="@id/imbSort"
             app:layout_constraintTop_toBottomOf="@id/viewTop" />
 
         <ImageButton
-            android:id="@+id/btnSort"
+            android:id="@+id/imbSort"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin_24"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_sort"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@id/viewCategory" />
+            app:layout_constraintTop_toTopOf="@id/viewSelectedOption" />
 
         <TextView
             android:id="@+id/txtPremium"
@@ -72,8 +72,8 @@
             android:text="@string/result_premium"
             android:textColor="@color/blue_gray3"
             android:textSize="@dimen/font_size_12"
-            app:layout_constraintLeft_toLeftOf="@id/viewCategory"
-            app:layout_constraintTop_toBottomOf="@id/viewCategory" />
+            app:layout_constraintLeft_toLeftOf="@id/viewSelectedOption"
+            app:layout_constraintTop_toBottomOf="@id/viewSelectedOption" />
 
         <TextView
             android:id="@+id/txtAd"
@@ -99,8 +99,8 @@
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/margin_8"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="@id/viewCategory"
-            app:layout_constraintRight_toRightOf="@id/btnSort"
+            app:layout_constraintLeft_toLeftOf="@id/viewSelectedOption"
+            app:layout_constraintRight_toRightOf="@id/imbSort"
             app:layout_constraintTop_toBottomOf="@id/txtPremium" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
