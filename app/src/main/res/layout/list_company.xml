@@ -24,7 +24,7 @@
             android:visibility="@{company.isPremium ? View.VISIBLE : View.INVISIBLE}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imgCompany"
@@ -40,22 +40,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_16"
+            android:fontFamily="@font/semi_bold"
             android:text="@{company.name}"
             android:textColor="@color/blue_gray4"
-            android:fontFamily="@font/semi_bold"
             android:textSize="@dimen/font_size_17"
-            app:layout_constraintBottom_toTopOf="@id/txtCompanyDistance"
+            app:layout_constraintBottom_toTopOf="@id/txtDistance"
             app:layout_constraintLeft_toRightOf="@id/imgCompany"
             app:layout_constraintTop_toTopOf="@id/imgCompany" />
 
         <TextView
-            android:id="@+id/txtCompanyDistance"
+            android:id="@+id/txtDistance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{company.distance}"
             android:textColor="@color/blue_gray5"
             android:textSize="@dimen/font_size_13"
-            app:layout_constraintBottom_toTopOf="@id/txtCompanyCategory"
+            app:layout_constraintBottom_toTopOf="@id/txtCategory"
             app:layout_constraintLeft_toLeftOf="@id/txtCompanyName"
             app:layout_constraintTop_toBottomOf="@id/txtCompanyName" />
 
@@ -66,12 +66,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_16"
             android:src="@drawable/img_star"
-            app:layout_constraintBottom_toBottomOf="@id/txtCompanyDistance"
-            app:layout_constraintLeft_toRightOf="@id/txtCompanyDistance"
-            app:layout_constraintTop_toTopOf="@id/txtCompanyDistance" />
+            app:layout_constraintBottom_toBottomOf="@id/txtDistance"
+            app:layout_constraintLeft_toRightOf="@id/txtDistance"
+            app:layout_constraintTop_toTopOf="@id/txtDistance" />
 
         <TextView
-            android:id="@+id/txtCompanyReview"
+            android:id="@+id/txtReview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{company.reviewToString}"
@@ -83,7 +83,7 @@
 
 
         <TextView
-            android:id="@+id/txtCompanyCategory"
+            android:id="@+id/txtCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{company.categoryToString}"
@@ -91,20 +91,20 @@
             android:textSize="@dimen/font_size_13"
             app:layout_constraintBottom_toBottomOf="@id/imgCompany"
             app:layout_constraintLeft_toLeftOf="@id/txtCompanyName"
-            app:layout_constraintTop_toBottomOf="@id/txtCompanyDistance" />
+            app:layout_constraintTop_toBottomOf="@id/txtDistance" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="7dp"
-            android:background="@drawable/shape_gb"
+            android:background="@drawable/shape_round_blue"
+            android:fontFamily="@font/semi_bold"
             android:paddingStart="@dimen/padding_7"
             android:paddingTop="@dimen/padding_6"
             android:paddingEnd="@dimen/padding_7"
             android:paddingBottom="@dimen/padding_6"
             android:text="@string/list_company_gb"
             android:textColor="@color/blue2"
-            android:fontFamily="@font/semi_bold"
             android:textSize="@dimen/font_size_10"
             android:visibility="@{company.isGB ? View.VISIBLE : View.INVISIBLE}"
             app:layout_constraintBottom_toBottomOf="parent"

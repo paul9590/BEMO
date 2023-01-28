@@ -25,4 +25,12 @@
     <color name="blue_gray3">#96A7C0</color>
     <color name="blue_gray4">#2B3646</color>
     <color name="blue_gray5">#3A495F</color>
+    <color name="blue_gray6">#627693</color>
+
+
+    <color name="yellow">#E0C500</color>
+    <color name="yellow2">#FFFBE0</color>
+
+    <color name="green">#63D24B</color>
+    <color name="green2">#EAF9E7</color>
 </resources>
