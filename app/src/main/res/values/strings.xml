@@ -6,6 +6,10 @@
     <string name="result_title">검색 결과</string>
     <string name="result_premium">프리미엄</string>
     <string name="result_ad">광고</string>
+    
+    
+    // activity_company
+    <dimen name="bottom_button_height">56dp</dimen>
 
     // list_company
     <string name="list_company_gb">국비지원</string>

@@ -23,6 +23,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activity.CompanyActivity"
+            android:theme="@style/Theme.BEMO"/>
+
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="1d6a3d48e493a1e9f00e0e06547f31e7" />
