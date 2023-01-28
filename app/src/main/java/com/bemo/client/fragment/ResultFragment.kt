@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bemo.client.CustomSnackBar
+import com.bemo.client.R
 import com.bemo.client.activity.MainActivity
 import com.bemo.client.recycler.CompanyRecyclerAdapter
 import com.bemo.client.databinding.FragmentResultBinding
@@ -39,11 +41,17 @@ class ResultFragment : Fragment() {
         val mBinding = FragmentResultBinding.inflate(inflater, container, false).apply {
             viewCompany.adapter = mAdapter
             viewCompany.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+
+
+            imbBack.setOnClickListener {
+                (activity as MainActivity).viewHome()
+            }
+
+            txtAd.setOnClickListener {
+                CustomSnackBar(root, getString(R.string.text_ad)).show()
+            }
         }
 
-        mBinding.imbBack.setOnClickListener {
-            (activity as MainActivity).viewHome()
-        }
         mBinding.viewModel = viewModel
         mBinding.lifecycleOwner = this
 

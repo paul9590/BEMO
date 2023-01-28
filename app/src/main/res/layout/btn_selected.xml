@@ -3,7 +3,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/shape_round_light_blue">
+    android:background="@drawable/shape_round_gb">
 
     <TextView
         android:id="@+id/txtSelected"
@@ -14,7 +14,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:paddingTop="@dimen/margin_8"
-        android:paddingStart="@dimen/margin_10"
+        android:paddingStart="@dimen/margin_8"
         android:paddingBottom="@dimen/margin_8"/>
 
     <ImageButton
@@ -24,7 +24,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/ic_clear"
-        android:paddingEnd="@dimen/margin_10"
+        android:paddingEnd="@dimen/margin_8"
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 

@@ -1,105 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="android.view.View"/>
+
+        <import type="android.view.View" />
+
         <variable
             name="company"
             type="com.bemo.client.model.Company" />
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/imgPremium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="@id/imgCompany"
-            app:layout_constraintRight_toRightOf="@id/imgCompany"
-            app:layout_constraintTop_toTopOf="@id/imgCompany"
             android:background="@drawable/img_premium"
             android:visibility="@{company.isPremium ? View.VISIBLE : View.INVISIBLE}"
-            app:layout_constraintBottom_toBottomOf="@id/imgCompany"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"/>
 
         <ImageView
             android:id="@+id/imgCompany"
             android:layout_width="@dimen/company_img_size"
             android:layout_height="@dimen/company_img_size"
-            android:layout_marginStart="@dimen/margin_24"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="@id/imgPremium"
+            app:layout_constraintLeft_toLeftOf="@id/imgPremium"
+            app:layout_constraintRight_toRightOf="@id/imgPremium"
+            app:layout_constraintTop_toTopOf="@id/imgPremium" />
 
         <TextView
             android:id="@+id/txtCompanyName"
             android:layout_width="wrap_content"
-            app:layout_constraintLeft_toRightOf="@id/imgCompany"
-            app:layout_constraintTop_toTopOf="@id/imgCompany"
-            android:layout_marginStart="@dimen/margin_12"
-            app:layout_constraintBottom_toTopOf="@id/txtCompanyDistance"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
             android:text="@{company.name}"
-            android:textSize="@dimen/font_size_15"
             android:textColor="@color/blue_gray4"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:id="@+id/imgRating"
-            android:layout_marginStart="@dimen/margin_6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintLeft_toRightOf="@id/txtCompanyName"
-            app:layout_constraintTop_toTopOf="@id/txtCompanyName"
-            app:layout_constraintBottom_toBottomOf="@id/txtCompanyName"
-            android:src="@drawable/img_star"/>
-
-        <TextView
-            android:id="@+id/txtCompanyReview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{company.reviewToString}"
-            android:textSize="@dimen/font_size_13"
-            android:textColor="@color/blue_gray5"
-            app:layout_constraintLeft_toRightOf="@id/imgRating"
-            app:layout_constraintTop_toTopOf="@id/txtCompanyName"
-            app:layout_constraintBottom_toBottomOf="@id/txtCompanyName" />
+            android:fontFamily="@font/semi_bold"
+            android:textSize="@dimen/font_size_17"
+            app:layout_constraintBottom_toTopOf="@id/txtCompanyDistance"
+            app:layout_constraintLeft_toRightOf="@id/imgCompany"
+            app:layout_constraintTop_toTopOf="@id/imgCompany" />
 
         <TextView
             android:id="@+id/txtCompanyDistance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{company.distance}"
-            android:textSize="@dimen/font_size_13"
             android:textColor="@color/blue_gray5"
+            android:textSize="@dimen/font_size_13"
+            app:layout_constraintBottom_toTopOf="@id/txtCompanyCategory"
             app:layout_constraintLeft_toLeftOf="@id/txtCompanyName"
-            app:layout_constraintTop_toBottomOf="@id/txtCompanyName"
-            app:layout_constraintBottom_toTopOf="@id/txtCompanyCategory"/>
+            app:layout_constraintTop_toBottomOf="@id/txtCompanyName" />
+
+
+        <ImageView
+            android:id="@+id/imgRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:src="@drawable/img_star"
+            app:layout_constraintBottom_toBottomOf="@id/txtCompanyDistance"
+            app:layout_constraintLeft_toRightOf="@id/txtCompanyDistance"
+            app:layout_constraintTop_toTopOf="@id/txtCompanyDistance" />
+
+        <TextView
+            android:id="@+id/txtCompanyReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{company.reviewToString}"
+            android:textColor="@color/blue_gray5"
+            android:textSize="@dimen/font_size_13"
+            app:layout_constraintBottom_toBottomOf="@id/imgRating"
+            app:layout_constraintLeft_toRightOf="@id/imgRating"
+            app:layout_constraintTop_toTopOf="@id/imgRating" />
+
 
         <TextView
             android:id="@+id/txtCompanyCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{company.categoryToString}"
+            android:textColor="@color/blue2"
             android:textSize="@dimen/font_size_13"
-            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@id/imgCompany"
             app:layout_constraintLeft_toLeftOf="@id/txtCompanyName"
-            app:layout_constraintTop_toBottomOf="@id/txtCompanyDistance"
-            app:layout_constraintBottom_toBottomOf="@id/imgCompany"/>
+            app:layout_constraintTop_toBottomOf="@id/txtCompanyDistance" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/shape_round_gb"
+            android:paddingStart="@dimen/padding_7"
+            android:paddingTop="@dimen/padding_6"
+            android:paddingEnd="@dimen/padding_7"
+            android:paddingBottom="@dimen/padding_6"
             android:text="@string/list_company_gb"
-            android:layout_marginEnd="@dimen/margin_24"
+            android:textColor="@color/blue2"
+            android:fontFamily="@font/semi_bold"
             android:textSize="@dimen/font_size_10"
-            android:textColor="@color/blue"
-            android:padding="@dimen/margin_6"
             android:visibility="@{company.isGB ? View.VISIBLE : View.INVISIBLE}"
-            android:background="@drawable/shape_round_light_blue"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

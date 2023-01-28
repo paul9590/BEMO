@@ -9,8 +9,17 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="blue">#3567FD</color>
+    <color name="blue2">#4262FF</color>
+
+
     <color name="gray">#A6B7D9</color>
+    <color name="gray2">#A5B9D4</color>
+
+
     <color name="light_blue">#F0F4FF</color>
+    <color name="light_blue2">#F0F2FF</color>
+
+
     <color name="blue_gray">#E9EFF7</color>
     <color name="blue_gray2">#D2DCE9</color>
     <color name="blue_gray3">#96A7C0</color>
