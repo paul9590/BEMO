@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/viewUtil"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="@dimen/corner_8"
+    android:layout_marginEnd="@dimen/margin_8"
+    app:cardBackgroundColor="@color/blue2"
+    app:cardCornerRadius="@dimen/corner_6"
     app:cardElevation="@dimen/elevation_0">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,17 +13,17 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/txtUtil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/margin_8"
-            android:paddingStart="@dimen/padding_12"
-            android:paddingTop="@dimen/padding_8"
-            android:paddingEnd="@dimen/padding_12"
-            android:paddingBottom="@dimen/padding_8"
+            android:layout_marginStart="@dimen/margin_12"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_12"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:textColor="@color/white"
             android:textSize="@dimen/font_size_14"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

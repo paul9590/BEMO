@@ -42,13 +42,13 @@ class CompanyViewModel(private val request: Request): ViewModel() {
 
     private fun getCompanyList(): ArrayList<Company> {
         return when(request) {
-            Request.COMPANY_RESULT -> tmpCompanyList()
-            Request.COMPANY_RECENT -> tmpCompanyList2()
-            Request.COMPANY_FAVORITE -> tmpCompanyList()
+            Request.COMPANY_RESULT -> getResultList()
+            Request.COMPANY_RECENT -> getRecentList()
+            Request.COMPANY_FAVORITE -> getFavoriteList()
         }
     }
 
-    private fun tmpCompanyList(): ArrayList<Company> {
+    private fun getResultList(): ArrayList<Company> {
         return ArrayList<Company>().apply {
             add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = false, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
             add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = true, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
@@ -64,7 +64,7 @@ class CompanyViewModel(private val request: Request): ViewModel() {
             add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = true, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
         }
     }
-    private fun tmpCompanyList2(): ArrayList<Company> {
+    private fun getRecentList(): ArrayList<Company> {
         return ArrayList<Company>().apply {
             add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = true, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
             add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = false, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
@@ -79,6 +79,23 @@ class CompanyViewModel(private val request: Request): ViewModel() {
             add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = false, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
             add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = true, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
             add(Company())
+        }
+    }
+
+    private fun getFavoriteList(): ArrayList<Company> {
+        return ArrayList<Company>().apply {
+            add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = false, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
+            add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = true, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
+            add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = false, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
+            add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = true, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
+            add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = false, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
+            add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = true, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
+            add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = false, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
+            add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = true, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
+            add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = false, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
+            add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = true, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
+            add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = false, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
+            add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = true, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))
         }
     }
 }

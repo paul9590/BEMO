@@ -5,7 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bemo.client.R
+import com.bemo.client.databinding.FragmentMyBinding
+import com.bemo.client.viewadapter.ViewAdapter
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,12 +31,35 @@ class MyFragment : Fragment() {
         }
     }
 
+    private lateinit var mBinding: FragmentMyBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my, container, false)
+
+        mBinding = FragmentMyBinding.inflate(inflater, container, false)
+        setTab()
+
+        return mBinding.root
+    }
+
+
+    private fun setTab() {
+
+        // 로그인 정보 불러오기
+        mBinding.txtMy.text = "김종민님,\n안녕하세요!!"
+        val adapter = ViewAdapter(childFragmentManager)
+        adapter.addList(RecentFragment())
+        adapter.addList(FavoriteFragment())
+        mBinding.pagerMy.adapter = adapter
+        mBinding.tabMy.setupWithViewPager(mBinding.pagerMy)
+
+        val texts = arrayOf("최근 본", "찜")
+
+        for(i in texts.indices) {
+            val tab = mBinding.tabMy.getTabAt(i)!!
+            tab.text = texts[i]
+        }
     }
 
     companion object {

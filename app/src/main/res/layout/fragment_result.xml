@@ -25,7 +25,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/txt_title"
+                android:id="@+id/txtTitle"
                 style="@style/text_title"
                 android:text="@string/result_title"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -75,23 +75,31 @@
             app:layout_constraintLeft_toLeftOf="@id/viewSelectedOption"
             app:layout_constraintTop_toBottomOf="@id/viewSelectedOption" />
 
-        <TextView
-            android:id="@+id/txtAd"
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_12"
-            android:background="@drawable/shape_round_gray_border"
-            android:paddingStart="@dimen/padding_4"
-            android:paddingTop="@dimen/padding_2"
-            android:paddingEnd="@dimen/padding_4"
-            android:paddingBottom="@dimen/padding_2"
-            android:text="@string/result_ad"
-            android:textColor="@color/gray2"
-            android:textSize="@dimen/font_size_8"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/corner_4"
             app:layout_constraintBottom_toBottomOf="@id/txtPremium"
             app:layout_constraintLeft_toRightOf="@id/txtPremium"
-            app:layout_constraintTop_toTopOf="@id/txtPremium" />
+            app:layout_constraintTop_toTopOf="@id/txtPremium"
+            app:strokeColor="@color/gray2"
+            app:strokeWidth="1dp">
 
+            <TextView
+                android:id="@+id/txtAd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/padding_4"
+                android:paddingTop="@dimen/padding_2"
+                android:paddingEnd="@dimen/padding_4"
+                android:paddingBottom="@dimen/padding_2"
+                android:text="@string/result_ad"
+                android:textColor="@color/gray2"
+                android:textSize="@dimen/font_size_8" />
+
+        </com.google.android.material.card.MaterialCardView>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/viewCompany"

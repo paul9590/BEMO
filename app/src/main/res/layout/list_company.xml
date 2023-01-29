@@ -96,9 +96,9 @@
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/light_blue2"
             app:cardCornerRadius="@dimen/corner_8"
             app:cardElevation="@dimen/elevation_0"
-            app:cardBackgroundColor="@color/light_blue2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -114,8 +114,7 @@
                 android:text="@string/list_company_gb"
                 android:textColor="@color/blue2"
                 android:textSize="@dimen/font_size_10"
-                android:visibility="@{company.isGB ? View.VISIBLE : View.INVISIBLE}"
- />
+                android:visibility="@{company.isGB ? View.VISIBLE : View.INVISIBLE}" />
         </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

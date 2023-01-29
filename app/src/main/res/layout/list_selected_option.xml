@@ -4,9 +4,9 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginEnd="@dimen/margin_4"
+    app:cardBackgroundColor="@color/light_blue2"
     app:cardCornerRadius="@dimen/corner_6"
-    app:cardElevation="@dimen/elevation_0"
-    app:cardBackgroundColor="@color/light_blue2">
+    app:cardElevation="@dimen/elevation_0">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -33,8 +33,8 @@
             android:id="@+id/imbClear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/margin_8"
             android:layout_marginStart="@dimen/padding_2"
+            android:layout_marginEnd="@dimen/margin_8"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_clear"
             app:layout_constraintBottom_toBottomOf="parent"

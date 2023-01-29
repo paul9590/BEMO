@@ -32,12 +32,11 @@
         <CheckBox
             android:id="@+id/chkFavorite"
             style="@style/chk_favorite"
+            android:layout_marginEnd="@dimen/margin_24"
             android:button="@android:color/transparent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginEnd="@dimen/margin_24"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -45,20 +44,20 @@
         android:id="@+id/btnMessage"
         android:layout_width="0dp"
         android:layout_height="@dimen/bottom_button_height"
+        android:background="@color/blue_gray7"
+        android:src="@drawable/ic_message"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:src="@drawable/ic_message"
-        android:background="@color/blue_gray7"
-        app:layout_constraintRight_toLeftOf="@id/btnCall"/>
+        app:layout_constraintRight_toLeftOf="@id/btnCall" />
 
     <ImageButton
         android:id="@+id/btnCall"
         android:layout_width="0dp"
         android:layout_height="@dimen/bottom_button_height"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:src="@drawable/ic_call"
         android:background="@color/blue2"
-        app:layout_constraintLeft_toRightOf="@id/btnMessage"/>
+        android:src="@drawable/ic_call"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btnMessage"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
