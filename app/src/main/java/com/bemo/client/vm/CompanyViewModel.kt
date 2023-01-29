@@ -48,6 +48,11 @@ class CompanyViewModel(private val request: Request): ViewModel() {
         }
     }
 
+    //TODO: 필터 적용
+    private fun filterByCategorySize() {
+        getCompanyList().filter { company -> company.category.any { currentSelectedOptionList.contains(it) } }.sortedByDescending { it.category.size }
+    }
+
     private fun getResultList(): ArrayList<Company> {
         return ArrayList<Company>().apply {
             add(Company(name = "송수학 학원", img = R.drawable.img_place1, isPremium = false, isGB = true,  target = "10대", distance = "1km", category = arrayListOf("수학", "영어"), reviewAvg = 4.3f, reviewCnt = 10))

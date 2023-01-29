@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bemo.client.activity.MainActivity
 import com.bemo.client.databinding.FragmentRecyclerBinding
 import com.bemo.client.recycler.CompanyRecyclerAdapter
 import com.bemo.client.vm.CompanyViewModel
@@ -45,6 +46,24 @@ class FavoriteFragment : Fragment() {
         val mBinding = FragmentRecyclerBinding.inflate(inflater, container, false).apply {
             viewList.adapter = companyAdapter
             viewList.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+
+            viewList.addOnScrollListener(object: RecyclerView.OnScrollListener() {
+                var stopped = false
+                override fun onScrolled(recyclerView:RecyclerView, dx:Int, dy:Int) {
+                    if(stopped) {
+                        super.onScrolled(recyclerView, dx, dy)
+                        if (dy < 0) {
+                            (activity as MainActivity).showNavigationViewWithAnimation()
+                        }else {
+                            (activity as MainActivity).hideNavigationViewWithAnimation()
+                        }
+                    }
+                }
+                override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                    super.onScrollStateChanged(recyclerView, newState)
+                    stopped = true
+                }
+            })
         }
 
         companyViewModel.companyList.observe(viewLifecycleOwner) {
@@ -52,6 +71,10 @@ class FavoriteFragment : Fragment() {
         }
 
         return mBinding.root
+    }
+    override fun onPause() {
+        super.onPause()
+        (activity as MainActivity).showNavigationView()
     }
 
     companion object {
