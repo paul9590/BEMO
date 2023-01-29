@@ -29,9 +29,10 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
-            android:id="@+id/imbFavorite"
-            style="@style/imb_favorite"
+        <CheckBox
+            android:id="@+id/chkFavorite"
+            style="@style/chk_favorite"
+            android:button="@android:color/transparent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"

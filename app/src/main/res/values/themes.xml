@@ -47,10 +47,10 @@
         <item name="android:contentDescription">뒤로 가기</item>
     </style>
 
-    <style name="imb_favorite" parent="Widget.AppCompat.ImageButton">
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:background">@drawable/ic_favorite</item>
+    <style name="chk_favorite" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_width">24dp</item>
+        <item name="android:background">@drawable/imb_favorite</item>
         <item name="android:contentDescription">찜하기</item>
     </style>
 
