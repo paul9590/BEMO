@@ -93,23 +93,30 @@
             app:layout_constraintLeft_toLeftOf="@id/txtCompanyName"
             app:layout_constraintTop_toBottomOf="@id/txtDistance" />
 
-        <TextView
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="7dp"
-            android:background="@drawable/shape_round_blue"
-            android:fontFamily="@font/semi_bold"
-            android:paddingStart="@dimen/padding_7"
-            android:paddingTop="@dimen/padding_6"
-            android:paddingEnd="@dimen/padding_7"
-            android:paddingBottom="@dimen/padding_6"
-            android:text="@string/list_company_gb"
-            android:textColor="@color/blue2"
-            android:textSize="@dimen/font_size_10"
-            android:visibility="@{company.isGB ? View.VISIBLE : View.INVISIBLE}"
+            app:cardCornerRadius="@dimen/corner_8"
+            app:cardElevation="@dimen/elevation_0"
+            app:cardBackgroundColor="@color/light_blue2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/semi_bold"
+                android:paddingStart="@dimen/padding_7"
+                android:paddingTop="@dimen/padding_6"
+                android:paddingEnd="@dimen/padding_7"
+                android:paddingBottom="@dimen/padding_6"
+                android:text="@string/list_company_gb"
+                android:textColor="@color/blue2"
+                android:textSize="@dimen/font_size_10"
+                android:visibility="@{company.isGB ? View.VISIBLE : View.INVISIBLE}"
+ />
+        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

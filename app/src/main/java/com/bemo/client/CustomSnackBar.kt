@@ -1,7 +1,9 @@
 package com.bemo.client
 
+import android.animation.ValueAnimator
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.FrameLayout
 import com.bemo.client.databinding.CustomSnackBarBinding
 import com.google.android.material.snackbar.Snackbar
 
