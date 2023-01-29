@@ -17,19 +17,27 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabMain"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/viewMain"
         android:layout_width="0dp"
         android:layout_height="56dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:tabIndicatorHeight="0dp"
-        app:tabRippleColor="@android:color/transparent"
-        app:tabSelectedTextColor="@color/black"
-        app:tabTextAppearance="@style/homeTabTextSize"
         android:layout_margin="@dimen/margin_12"
-        android:background="@drawable/shape_round"
-        app:tabTextColor="@color/gray"/>
+        app:cardCornerRadius="@dimen/corner_10"
+        app:cardElevation="20dp"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:tabIndicatorHeight="0dp"
+            app:tabRippleColor="@android:color/transparent"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextAppearance="@style/homeTabTextSize"
+            app:tabTextColor="@color/gray"/>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

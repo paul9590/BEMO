@@ -2,7 +2,10 @@ package com.bemo.client.activity
 
 import android.graphics.PorterDuff
 import android.os.Bundle
+import android.view.View
 import android.view.ViewTreeObserver
+import android.view.animation.AlphaAnimation
+import android.view.animation.Animation
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.bemo.client.R
@@ -12,6 +15,7 @@ import com.bemo.client.fragment.MyFragment
 import com.bemo.client.fragment.ResultFragment
 import com.bemo.client.viewadapter.ViewAdapter
 import com.google.android.material.tabs.TabLayout
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -79,5 +83,21 @@ class MainActivity : AppCompatActivity() {
 
     fun viewHome() {
         mBinding.pagerMain.currentItem = 0
+    }
+
+    fun showNavigationView() {
+        mBinding.viewMain.visibility = View.VISIBLE
+    }
+    fun showNavigationViewWithAnimation() {
+        val animation: Animation = AlphaAnimation(0f, 1f)
+        animation.duration = 200
+        mBinding.viewMain.animation = animation
+        mBinding.viewMain.visibility = View.VISIBLE
+    }
+    fun hideNavigationViewWithAnimation() {
+        val animation: Animation = AlphaAnimation(1f, 0f)
+        animation.duration = 200
+        mBinding.viewMain.animation = animation
+        mBinding.viewMain.visibility = View.GONE
     }
 }

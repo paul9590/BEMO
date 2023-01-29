@@ -1,6 +1,7 @@
 package com.bemo.client.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -56,6 +57,23 @@ class ResultFragment : Fragment() {
             imbSort.setOnClickListener {
                 companyViewModel.addSelectedOptionItem("수학")
             }
+            viewCompany.addOnScrollListener(object: RecyclerView.OnScrollListener() {
+                var stopped = false
+                override fun onScrolled(recyclerView:RecyclerView, dx:Int, dy:Int) {
+                    if(stopped) {
+                        super.onScrolled(recyclerView, dx, dy)
+                        if (dy < 0) {
+                            (activity as MainActivity).showNavigationViewWithAnimation()
+                        }else {
+                            (activity as MainActivity).hideNavigationViewWithAnimation()
+                        }
+                    }
+                }
+                override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                    super.onScrollStateChanged(recyclerView, newState)
+                    stopped = true
+                }
+            })
         }
 
         mBinding.viewModel = companyViewModel
@@ -70,6 +88,11 @@ class ResultFragment : Fragment() {
         }
 
         return mBinding.root
+    }
+
+    override fun onPause() {
+        super.onPause()
+        (activity as MainActivity).showNavigationView()
     }
 
     companion object {

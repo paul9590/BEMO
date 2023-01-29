@@ -65,6 +65,7 @@
 
     <dimen name="corner_6">6dp</dimen>
     <dimen name="corner_8">8dp</dimen>
+    <dimen name="corner_10">10dp</dimen>
     <dimen name="corner_12">12dp</dimen>
 
     <dimen name="elevation_0">0dp</dimen>

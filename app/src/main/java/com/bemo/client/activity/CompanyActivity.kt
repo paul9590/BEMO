@@ -16,6 +16,9 @@ class CompanyActivity: AppCompatActivity() {
         val company = intent.getStringExtra("company")
         mBinding.apply {
             txtCompanyName.text = company
+            imbBack.setOnClickListener {
+                finish()
+            }
         }
     }
 }
