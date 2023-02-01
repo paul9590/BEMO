@@ -25,9 +25,11 @@
     <color name="blue_gray3">#96A7C0</color>
     <color name="bg_22">#2B3646</color>
     <color name="blue_gray5">#3A495F</color>
+    <color name="bg_40">#52637A</color>
     <color name="bg_48">#627693</color>
     <color name="blue_gray7">#F8FAFC</color>
     <color name="blue_gray8">#F1F6FD</color>
+    <color name="bg_94">#E9EFF7</color>
 
 
     <color name="yellow">#E0C500</color>

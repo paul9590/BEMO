@@ -1,6 +1,5 @@
 package com.bemo.client.vm
 
-import android.graphics.Color
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.bemo.client.*
@@ -29,7 +28,9 @@ class CompanyInfoViewModel: ViewModel() {
                                 add(Utility("국비지원", R.color.light_blue2, R.color.blue2))
                             }
             ))
-            add(CompanyInfoTeacher())
+            add(CompanyInfoTeacher(name = "주진영", rank = "대표", career = "백엔드 개발자 1년\n카카오톡 입사\n안녕하세요 저는 주진영 입니다.\n" +
+                    "안녕하세요 저는 주진영 입니다 반가워요\n" +
+                    "안녕하세요 저는 주진영 입니다.\n",introduce = "안녕하세요 저는 주진영 입니다."))
             add(CompanyInfoReview())
             add(CompanyInfoReviewAvg())
             add(CompanyInfoCategory(ArrayList()))

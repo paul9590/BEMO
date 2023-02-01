@@ -26,6 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_12"
+        android:text="@string/teacher_name"
         app:layout_constraintBottom_toTopOf="@id/teacherRank"
         app:layout_constraintLeft_toRightOf="@id/viewImg"
         app:layout_constraintTop_toTopOf="@id/viewImg" />
@@ -35,6 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/teacher_rank"
         app:layout_constraintLeft_toLeftOf="@id/teacherName"
         app:layout_constraintTop_toBottomOf="@id/teacherName" />
 
@@ -43,6 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/teacher_career"
         app:layout_constraintLeft_toLeftOf="@id/teacherName"
         app:layout_constraintTop_toBottomOf="@id/teacherRank" />
 
@@ -81,15 +84,25 @@
 
     </androidx.core.widget.NestedScrollView>
 
-    <TextView
-        android:id="@+id/txtTeacherIntroduce"
+    <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_12"
-        android:padding="@dimen/padding_14"
+        app:cardBackgroundColor="@color/bg_94"
+        app:cardCornerRadius="@dimen/corner_10"
+        app:cardElevation="@dimen/elevation_0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@id/viewImg"
         app:layout_constraintRight_toRightOf="@id/viewCareer"
-        app:layout_constraintTop_toBottomOf="@id/viewImg" />
+        app:layout_constraintTop_toBottomOf="@id/viewImg">
+
+        <TextView
+            android:id="@+id/txtTeacherIntroduce"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_14"
+            android:textColor="@color/bg_40"
+            android:textSize="@dimen/font_size_15" />
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

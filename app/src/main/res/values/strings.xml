@@ -31,6 +31,9 @@
     // list_company_teacher
     <dimen name="company_teacher_height">150dp</dimen>
     <dimen name="company_teacher_width">120dp</dimen>
+    <string name="teacher_name">성함</string>
+    <string name="teacher_rank">직급</string>
+    <string name="teacher_career">커리어</string>
 
 
     // my_fragment

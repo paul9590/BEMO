@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import com.bemo.client.*
-import com.bemo.client.databinding.ListCategoryBinding
 import com.bemo.client.databinding.ListCompanyCategoryBinding
 import com.bemo.client.databinding.ListCompanyImgBinding
 import com.bemo.client.databinding.ListCompanyInfoBinding
@@ -18,7 +17,7 @@ import com.bemo.client.databinding.ListCompanyTeacherBinding
 import com.bemo.client.databinding.ListCompanyTextBinding
 import java.text.DecimalFormat
 
-class CompanyInfoRecyclerAdapter():
+class CompanyInfoRecyclerAdapter:
     RecyclerView.Adapter<CustomViewHolder>(){
     private var companyInfoList = ArrayList<CompanyInfo>()
     private lateinit var context: Context
@@ -56,7 +55,6 @@ class CompanyInfoRecyclerAdapter():
                     txtTarget.text = item.target
                     viewUtility.adapter = CompanyUtilityRecyclerAdapter(item.utilityList)
                     viewUtility.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
-                    //TODO: viewUtil
                 }
             }
             COMPANY_TEXT -> {
@@ -80,7 +78,7 @@ class CompanyInfoRecyclerAdapter():
                     imgTeacher.setImageResource(item.img)
                     txtTeacherRank.text = item.rank
                     txtTeacherIntroduce.text = item.introduce
-                    txtTeacherCareer.text = item.desc
+                    txtTeacherCareer.text = item.career
                 }
             }
             COMPANY_REVIEW_AVG -> {

@@ -24,7 +24,7 @@ data class CompanyInfoImg(val title: String = "", val img: Int = R.drawable.img_
     override val type = COMPANY_IMG
 }
 
-data class CompanyInfoTeacher(val name: String = "", val desc: String = "", val img: Int = R.drawable.img_default_company_info_career, val rank: String = "", val introduce: String = ""): CompanyInfo {
+data class CompanyInfoTeacher(val name: String = "", val career: String = "", val img: Int = R.drawable.img_default_company_info_career, val rank: String = "", val introduce: String = ""): CompanyInfo {
     override val type = COMPANY_TEACHER
 }
 data class CompanyInfoReviewAvg(val title: String = "", val rating: Float = 0.0f): CompanyInfo {
