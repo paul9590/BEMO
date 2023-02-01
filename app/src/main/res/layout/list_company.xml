@@ -62,8 +62,8 @@
 
         <ImageView
             android:id="@+id/imgRating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/list_company_star_size"
+            android:layout_height="@dimen/list_company_star_size"
             android:layout_marginStart="@dimen/margin_16"
             android:src="@drawable/img_star"
             app:layout_constraintBottom_toBottomOf="@id/txtDistance"

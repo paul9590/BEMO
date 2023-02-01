@@ -13,6 +13,7 @@
 
     // list_company
     <string name="list_company_gb">국비지원</string>
+    <dimen name="list_company_star_size">16dp</dimen>
     
     // list_company_info
     <string name="company_address">주소</string>
