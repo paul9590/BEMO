@@ -106,7 +106,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/my_point"
-                    android:textColor="@color/blue_gray6"
+                    android:textColor="@color/bg_48"
                     android:textSize="@dimen/font_size_16"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
