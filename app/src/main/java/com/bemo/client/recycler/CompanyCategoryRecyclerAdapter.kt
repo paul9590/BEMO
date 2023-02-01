@@ -3,13 +3,12 @@ package com.bemo.client.recycler
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bemo.client.Category
-import com.bemo.client.databinding.ListUtilBinding
+import com.bemo.client.databinding.ListCategoryBinding
 
-class CompanyCategoryRecyclerAdapter(private val mList: ArrayList<Category>) : RecyclerView.Adapter<CompanyCategoryRecyclerAdapter.CompanyCategoryViewHolder>() {
+class CompanyCategoryRecyclerAdapter(private val mList: ArrayList<String>) : RecyclerView.Adapter<CompanyCategoryRecyclerAdapter.CompanyCategoryViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CompanyCategoryViewHolder {
-        val mBinding = ListUtilBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val mBinding = ListCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CompanyCategoryViewHolder(mBinding)
     }
 
@@ -21,10 +20,9 @@ class CompanyCategoryRecyclerAdapter(private val mList: ArrayList<Category>) : R
         return mList.size
     }
 
-    class CompanyCategoryViewHolder(val mBinding: ListUtilBinding): RecyclerView.ViewHolder(mBinding.root) {
-        fun bind(category: Category) {
-            mBinding.txtUtil.text = category.name
-            //TODO Background
+    class CompanyCategoryViewHolder(val mBinding: ListCategoryBinding): RecyclerView.ViewHolder(mBinding.root) {
+        fun bind(category: String) {
+            mBinding.txtName.text = category
         }
     }
 }

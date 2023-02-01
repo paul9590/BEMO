@@ -3,6 +3,7 @@ package com.bemo.client.recycler
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import com.bemo.client.*
@@ -53,6 +54,8 @@ class CompanyInfoRecyclerAdapter():
                     txtAddress.text = item.address
                     txtDistance.text = item.distance
                     txtTarget.text = item.target
+                    viewUtility.adapter = CompanyUtilityRecyclerAdapter(item.utilityList)
+                    viewUtility.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
                     //TODO: viewUtil
                 }
             }
@@ -99,7 +102,7 @@ class CompanyInfoRecyclerAdapter():
                 item as CompanyInfoCategory
                 (mBinding as ListCompanyCategoryBinding).apply {
                     viewCategory.adapter = CompanyCategoryRecyclerAdapter(item.categoryList)
-                    //viewCategory.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
+                    viewCategory.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
                 }
             }
             COMPANY_LOCATION -> {

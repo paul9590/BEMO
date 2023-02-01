@@ -39,13 +39,13 @@ data class CompanyDetail(
     val address: String = "",
     val target: String = "",
     val distance: String = "",
-    val utility: ArrayList<String> = ArrayList(),
+    val utilityList: ArrayList<Utility> = ArrayList(),
 ) :
     Serializable, CompanyInfo {
     override val type = COMPANY_INFO
 }
 
-data class CompanyInfoCategory(val categoryList: ArrayList<Category> = ArrayList()): CompanyInfo {
+data class CompanyInfoCategory(val categoryList: ArrayList<String> = ArrayList()): CompanyInfo {
     override val type = COMPANY_CATEGORY
 }
 
@@ -64,4 +64,4 @@ data class Info(val title: String, val body: String)
 
 data class PointInfo(val title: String, val body: String, val img: Int)
 
-data class Category(val name: String, val color: Int)
+data class Utility(val name: String, val background: Int, val textColor: Int)

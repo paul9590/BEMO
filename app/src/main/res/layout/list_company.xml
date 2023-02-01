@@ -42,7 +42,7 @@
             android:layout_marginStart="@dimen/margin_16"
             android:fontFamily="@font/semi_bold"
             android:text="@{company.name}"
-            android:textColor="@color/blue_gray4"
+            android:textColor="@color/bg_22"
             android:textSize="@dimen/font_size_17"
             app:layout_constraintBottom_toTopOf="@id/txtDistance"
             app:layout_constraintLeft_toRightOf="@id/imgCompany"

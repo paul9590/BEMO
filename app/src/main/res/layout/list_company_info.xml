@@ -61,6 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_8"
+        android:textColor="@color/bg_22"
         app:layout_constraintBottom_toBottomOf="@id/address"
         app:layout_constraintLeft_toRightOf="@id/address"
         app:layout_constraintTop_toTopOf="@id/address" />
@@ -69,6 +70,7 @@
         android:id="@+id/txtTarget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/bg_22"
         app:layout_constraintBottom_toBottomOf="@id/target"
         app:layout_constraintLeft_toLeftOf="@id/txtAddress"
         app:layout_constraintTop_toTopOf="@id/target" />
@@ -77,12 +79,13 @@
         android:id="@+id/txtDistance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/bg_22"
         app:layout_constraintBottom_toBottomOf="@id/distance"
         app:layout_constraintLeft_toLeftOf="@id/txtAddress"
         app:layout_constraintTop_toTopOf="@id/distance" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/viewUtil"
+        android:id="@+id/viewUtility"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_20"
