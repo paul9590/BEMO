@@ -11,6 +11,7 @@
         android:layout_marginStart="@dimen/margin_24"
         android:layout_marginTop="@dimen/margin_14"
         android:fontFamily="@font/semi_bold"
+        android:text="@string/company_location"
         android:textSize="@dimen/font_size_17"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

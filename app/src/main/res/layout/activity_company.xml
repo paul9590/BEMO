@@ -40,6 +40,28 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabCompany"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewTop"
+        app:tabIndicatorColor="@color/blue"
+        app:tabIndicatorHeight="4dp"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@color/blue"
+        app:tabTextColor="@color/gray" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pagerCompany"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/btnMessage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabCompany" />
+
     <ImageButton
         android:id="@+id/btnMessage"
         android:layout_width="0dp"

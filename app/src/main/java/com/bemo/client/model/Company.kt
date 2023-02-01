@@ -1,13 +1,11 @@
 package com.bemo.client.model
 
-import com.bemo.client.COMPANY_COMPANY
-import com.bemo.client.CompanyInfo
 import com.bemo.client.R
 import java.io.Serializable
 
 
 data class Company(
-    override val name: String = "",
+    val name: String = "",
     val img: Int = R.drawable.img_default_company,
     val isPremium: Boolean = false,
     val isGB: Boolean = false,
@@ -15,10 +13,10 @@ data class Company(
     val distance: String = "",
     val category: ArrayList<String> = ArrayList(),
     val reviewAvg: Float = 0.0f,
-    val reviewCnt: Int = 0
+    val reviewCnt: Int = 0,
+    val isFavorite: Boolean = false
 ) :
-    Serializable, CompanyInfo {
-    override val type = COMPANY_COMPANY
+    Serializable {
     val categoryToString: String get() {
         if(category.isEmpty()) {
             return ""

@@ -23,7 +23,7 @@ class CompanyRecyclerAdapter : RecyclerView.Adapter<CompanyRecyclerAdapter.Compa
         holder.mBinding.root.setOnClickListener {
             //TODO company details
             val intent = Intent(view.context, CompanyActivity::class.java)
-            intent.putExtra("company", "송수학 학원")
+            intent.putExtra("company", companyList[position])
             view.context.startActivity(intent)
         }
     }

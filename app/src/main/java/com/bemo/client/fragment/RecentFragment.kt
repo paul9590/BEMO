@@ -27,8 +27,8 @@ class RecentFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    private val companyAdapter = CompanyRecyclerAdapter()
-    private val companyViewModel = CompanyViewModel(Request.COMPANY_RECENT)
+    private val adapter = CompanyRecyclerAdapter()
+    private val viewModel = CompanyViewModel(Request.COMPANY_RECENT)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,7 +44,7 @@ class RecentFragment : Fragment() {
     ): View {
 
         val mBinding = FragmentRecyclerBinding.inflate(inflater, container, false).apply {
-            viewList.adapter = companyAdapter
+            viewList.adapter = adapter
             viewList.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
 
             viewList.addOnScrollListener(object: RecyclerView.OnScrollListener() {
@@ -66,8 +66,8 @@ class RecentFragment : Fragment() {
             })
         }
 
-        companyViewModel.companyList.observe(viewLifecycleOwner) {
-            companyViewModel.companyList.value?.let { companyAdapter.setData(it) }
+        viewModel.companyList.observe(viewLifecycleOwner) {
+            viewModel.companyList.value?.let { adapter.setData(it) }
         }
 
         return mBinding.root

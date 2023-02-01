@@ -53,6 +53,7 @@
         android:numStars="5"
         android:progressDrawable="@drawable/custom_rating_bar_s"
         android:rating="3.5"
+        android:background="@android:color/transparent"
         android:secondaryProgressTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@id/viewImg"
         app:layout_constraintLeft_toLeftOf="@id/txtName"
