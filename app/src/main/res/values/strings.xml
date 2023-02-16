@@ -2,6 +2,11 @@
     <string name="app_name">BEMO</string>
     <string name="middle_dot">·</string>
 
+    // home_fragment
+    <string name="home_title">배모</string>
+    <string name="lesson_title">배울 수 있어요!</string>
+    <string name="place_title">장소를 제공해요!</string>
+
     // result_fragment
     <string name="result_title">검색 결과</string>
     <string name="result_premium">프리미엄</string>
